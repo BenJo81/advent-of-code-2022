@@ -19,9 +19,13 @@ for match in lines:
 for match in master_list:
     elf = match[0]
     me = match[1]
-    if elf < me or elf == 3 and me == 1:
+    if elf == 3 and me == 1:
         score += me + 6
-    elif me < elf or elf == 1 and me == 3:
+    elif elf == 1 and me == 3:
+        score += me
+    elif elf < me:
+        score += me + 6
+    elif me < elf:
         score += me
     elif elf == me:
         score += me + 3
