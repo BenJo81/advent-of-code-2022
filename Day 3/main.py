@@ -19,9 +19,7 @@ for item in lines:
     for char in part_1:
         if char in part_2:
             got_it = char
-            master_list.append(got_it)
-
-print(master_list)
+    master_list.append(got_it)
 
 for item in master_list:
     index = alphabet.index(item.lower())
@@ -30,6 +28,5 @@ for item in master_list:
         score += index
     elif item.isupper():
         score += (index + 26)
-    print(index, score)
 
 print(score)
